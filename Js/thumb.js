@@ -6,7 +6,7 @@ class PraiseButton {
         numberNode.innerHTML = +numberNode.innerHTML + 1
     }
 }
-class Thumb extends PraiseButton {
+export class Thumb extends PraiseButton {
     constructor() {
         super()
     }
@@ -33,4 +33,3 @@ class Thumb extends PraiseButton {
 var thumb = new Thumb()
 thumb.uploadJquery()
 $('#praise').clickThumb()
-module.exports = Thumb
