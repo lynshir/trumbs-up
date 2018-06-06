@@ -1,0 +1,19 @@
+{
+  "name": "trumbs-up",
+  "version": "1.0.0",
+  "description": "点赞功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lynshir/trumbs-up.git"
+  },
+  "author": "lynshir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lynshir/trumbs-up/issues"
+  },
+  "homepage": "https://github.com/lynshir/trumbs-up#readme"
+}
