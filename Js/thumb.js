@@ -29,6 +29,7 @@ class Thumb extends PraiseButton {
         });
     }
 }
+
 var thumb = new Thumb()
 thumb.uploadJquery()
 $('#praise').clickThumb()
