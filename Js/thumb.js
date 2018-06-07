@@ -1,9 +1,13 @@
 class PraiseButton {
     constructor() {
     }
+    getValue(num){
+        return num + 1
+    }
     addOne() { //加1功能
         let numberNode = document.getElementById('praise-txt')
-        numberNode.innerHTML = +numberNode.innerHTML + 1
+        numberNode.innerHTML = this.getValue(+numberNode.innerHTML)
+        return true
     }
 }
 export class Thumb extends PraiseButton {
@@ -16,6 +20,7 @@ export class Thumb extends PraiseButton {
         setTimeout(function () { //动画效果
             $('#praise-img').addClass('animation')
         }, 1)
+        return true
     }
     //挂载到jquery上的方法
     uploadJquery() {
@@ -27,9 +32,8 @@ export class Thumb extends PraiseButton {
                 });
             }
         });
+        return true
     }
 }
 
-var thumb = new Thumb()
-thumb.uploadJquery()
-$('#praise').clickThumb()
+window.Thumb = Thumb

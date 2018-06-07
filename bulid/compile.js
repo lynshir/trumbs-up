@@ -71,11 +71,17 @@
         }
 
         _createClass(PraiseButton, [{
+            key: 'getValue',
+            value: function getValue(num) {
+                return num + 1;
+            }
+        }, {
             key: 'addOne',
             value: function addOne() {
                 //加1功能
                 var numberNode = document.getElementById('praise-txt');
-                numberNode.innerHTML = +numberNode.innerHTML + 1;
+                numberNode.innerHTML = this.getValue(+numberNode.innerHTML);
+                return true;
             }
         }]);
 
@@ -100,6 +106,7 @@
                     //动画效果
                     $('#praise-img').addClass('animation');
                 }, 1);
+                return true;
             }
             //挂载到jquery上的方法
 
@@ -114,13 +121,12 @@
                         });
                     }
                 });
+                return true;
             }
         }]);
 
         return Thumb;
     }(PraiseButton);
 
-    var thumb = new Thumb();
-    thumb.uploadJquery();
-    $('#praise').clickThumb();
+    window.Thumb = Thumb;
 });
